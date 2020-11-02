@@ -3,8 +3,8 @@
 
 .data            
     number db 04h
-    source db ?
-    destination db ?
+    source db 04 dup (?)
+    destination db 04 dup (?)
     
 .code
     ascending proc  ; smallest to largest
@@ -12,10 +12,7 @@
         .startup 
         
         mov al, 00h     ; epoch
-        mov cl, number  ; inloop
-        mov ch, 00h
-        mov DI, cx      ; destination count 
-        dec DI
+        mov DI, 0000h      ; destination count 
         EPOCH: 
         mov SI, 0000h   ; source count  
         mov cl, number  ; inloop
