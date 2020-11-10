@@ -16,10 +16,10 @@
         EPOCH: 
         mov SI, 0000h   ; source count  
         mov cl, number  ; inloop
-        mov ch, 00h
+        ;mov ch, 00h
         sub cl, al  
         dec cl
-        mov bl, 00h     ; destination count
+        ;mov bl, 00h     ; destination count
         inc al 
         cmp al, number
         JZ EXIT
